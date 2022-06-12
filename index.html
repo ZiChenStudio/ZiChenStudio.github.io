@@ -1,1 +1,31 @@
-
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<!--设置网页颜色-->
+<body style="background-color:black">
+<title>子沉工作室ZiChenStudio</title>
+</head>
+<body>
+<hr style="color:white">
+<a href="https://zichenstudio.github.io/net/">请点击此跳转<br>Please click this jump</a>
+<hr style="color:white">
+<script>
+//网站禁止选择文字
+    document.body.onselectstart = function() {
+    self.event.returnValue=false
+};
+document.onkeydown = function(){
+    //禁止 F12
+    if (window.event && window.event.keyCode == 123) {
+    event.keyCode = 0;
+    event.returnValue = false;
+    }
+    }
+document.onkeydown = function(){
+    //禁止ctrl+u
+    if (event.ctrlKey && window.event.keyCode==85){
+    return false;
+    }
+    }
+</script>
+</body>
