@@ -1,1 +1,60 @@
 
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>子沉ZiChen官方日历</title>
+</head>
+<body>
+<script>
+    function getTime() {
+        var date = new Date();
+        var year = date.getFullYear(); //获取年份
+        var month = date.getMonth() + 1; //获取月份
+        var day = date.getDate(); //获取日期
+        var hour = date.getHours(); //获取小时
+        hour = hour < 10 ? '0' + hour : hour;
+        var minute = date.getMinutes(); // 获取分
+        minute = minute < 10 ? '0' + minute : minute;
+        var seconds = date.getSeconds(); //获取秒
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
+    }
+ 
+    setInterval(function() {
+        document.querySelector('.box').innerHTML = getTime();
+    }, 1000)
+
+</script>
+<p align="center"><a href="https://zichenstudio.github.io/">我们的官方网站</a> </p>
+<p>今天是</p>
+<div class="box"></div>
+<hr>
+<p style="text-align: center;">免费的广告位<br>现在广告“占有人”：子沉工作室-三哥
+<hr>
+<p style="text-align: center;"><img src="" ></p>
+
+<p>技术支持：柱子2334|文案：三哥啊|网站：GitHub|图片直链：sm.ms<br>
+特别鸣谢：GitHub、sm.ms</p>
+<hr>
+<script>
+    //网站禁止选择文字
+    document.body.onselectstart = function() {
+    self.event.returnValue=false
+};
+document.onkeydown = function(){
+    //禁止 F12
+    if (window.event && window.event.keyCode == 123) {
+    event.keyCode = 0;
+    event.returnValue = false;
+    }
+    }
+document.onkeydown = function(){
+    //禁止ctrl+u
+    if (event.ctrlKey && window.event.keyCode==85){
+    return false;
+    }
+    }
+</script>
+</body>
+ 
+</html>
